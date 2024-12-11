@@ -38,11 +38,8 @@ function showQuestion(){
 
 function answer(selection){
     let question = questions[currentQuestion];
-    console.log('Selecetd answer is ',selection);
-
     let selectedQuestionNumber = selection.slice(-1);
-    console.log('selectedQuestionNumber is ', selectedQuestionNumber);
-    console.log('Current question is ',question['right_answer']);
+    let idOfRightAnswer = `answer${question['right_answer']}`;
 
     if(selectedQuestionNumber == question['right_answer']){
         console.log('Richtige antwort');
@@ -50,7 +47,13 @@ function answer(selection){
     }else{
         console.log('Falsche antwort');
         document.getElementById(selection).parentNode.classList.add('bg-danger');
+        document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
     }
+
+    document.getElementById('nextButton').disabled = false;
 }
+
+
+
 
 
