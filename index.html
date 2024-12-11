@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body onload="init()">
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">Quiz App</span>
@@ -25,7 +25,7 @@
     </nav>
 
     <div class="container">
-        <div class="card" style="width: 18rem;">
+        <div class="card quiz-card">
             <img src="./img/pencil.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">Frage</h5>
@@ -36,24 +36,24 @@
                 </div>
                 <div class="card mb-2">
                     <div class="card-body">
-                      Antwort
+                        Antwort
                     </div>
-                  </div>
-                  <div class="card mb-2">
+                </div>
+                <div class="card mb-2">
                     <div class="card-body">
                         Antwort
                     </div>
-                  </div>
-                  <div class="card mb-2">
+                </div>
+                <div class="card mb-2">
                     <div class="card-body">
                         Antwort
                     </div>
-                  </div>
+                </div>
 
-                  <div class="question-footer">
-                    <b>1</b> von <b>5</b> Fragen
-                    <button>Nächste Frage</button>
-                  </div>
+                <div class="question-footer">
+                    <span><b>1</b> von <b>5</b> Fragen</span>
+                    <button type="button" class="btn btn-primary">Nächste Frage</button>
+                </div>
 
             </div>
         </div>
