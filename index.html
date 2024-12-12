@@ -25,9 +25,27 @@
     </nav>
 
     <div class="container">
+
+
         <div class="card quiz-card">
-            <img src="./img/pencil.jpg" class="card-img-top">
-            <div class="card-body">
+            <img src="./img/pencil.jpg" id="headerImg" class="card-img-top">
+
+            <div class="progress">
+                <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%">25%</div>
+            </div>
+            <div class="card-body" id="endScreen" style="display: none;">
+                <div class="text-center final-headline">
+                    Quiz beendet!
+                </div>
+
+
+                <div class="text-center">
+                    Du hast <b id="amountofRightQuestions">X</b> Fragen von <b id="amountofQuestions">X</b> richtig
+                    beantworten
+                </div>
+            </div>
+
+            <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="questionText">Frage</h5>
 
                 <div class="card quiz-answer-card mb-2" onclick="answer('answer1')">
@@ -53,9 +71,10 @@
 
                 <div class="question-footer">
                     <span>
-                        <b>1</b> von <b id="allQuestions">5</b> Fragen
+                        <b id="questionNumber">1</b> von <b id="allQuestions">5</b> Fragen
                     </span>
-                    <button type="button" class="btn btn-primary" id="nextButton" disabled>Nächste Frage</button>
+                    <button onclick="nextQuestion()" type="button" class="btn btn-primary" id="nextButton"
+                        disabled>Nächste Frage</button>
                 </div>
 
             </div>
